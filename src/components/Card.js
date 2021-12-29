@@ -1,4 +1,8 @@
 import React from "react";
+
+import Header from "./header";
+import Middle from "./middle";
+import Footer from "./footer";
 import styles from './card.css';
 
 class Card extends React.Component{
@@ -8,18 +12,9 @@ class Card extends React.Component{
     render(){
         return(
             <div className="cardlayout">
-                <div className="header">
-                    <span className="place">Mumbai</span>
-                    <span className="time">19:50</span>
-                </div>
-                <div className="svg"></div>
-                <div className="more">
-                    <div className="two">
-                        <span className="wind">1 m/s</span>
-                        <span className="humidity">36%</span>
-                    </div>
-                    <div className="temp">32°</div>
-                </div>
+                <Header></Header>
+                <Middle></Middle>
+                <Footer></Footer>
             </div>
         )
     }
