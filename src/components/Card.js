@@ -14,7 +14,7 @@ class Card extends React.Component{
             <div className="cardlayout">
                 <Header  place="Dubai" time="19:52"></Header>
                 <Middle  img="cloudy"></Middle>
-                <Footer  wind="2" humi="23"></Footer>
+                <Footer  wind="2" humi="23" temp="32"></Footer>
             </div>
         )
     }
