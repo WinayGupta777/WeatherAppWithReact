@@ -7,8 +7,8 @@ class Header extends React.Component{
     render(){
         return(
             <div className="header">
-                <span className="place">Mumbai</span>
-                <span className="time">19:50</span>
+                <span className="place">{this.props.place}</span>
+                <span className="time">{this.props.time}</span>
             </div>
         )
     }

@@ -12,9 +12,9 @@ class Card extends React.Component{
     render(){
         return(
             <div className="cardlayout">
-                <Header></Header>
-                <Middle></Middle>
-                <Footer></Footer>
+                <Header  place="Dubai" time="19:52"></Header>
+                <Middle  img="cloudy"></Middle>
+                <Footer  wind="2" humi="23"></Footer>
             </div>
         )
     }
