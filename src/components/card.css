@@ -21,20 +21,18 @@ div.cardlayout{
 }
 
 div.header{
-
     padding: 15px 40px 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 span.place{
-    color: azure;
+    color: rgb(240, 255, 255);
     font-size: 38px;
 }
 span.time {
-    color: rgb(159, 161, 161);
+    color: rgb(192, 194, 194);
     font-size: 30px;
-    
 }
 
 div.svg {
@@ -59,7 +57,7 @@ div.more {
 }
 .more .two {
     height: 100px;
-    width: 100px;
+    width: 130px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -75,6 +73,12 @@ div.more {
 
 .two span{
     color: aliceblue;
-    font-size: 23px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
 
+img.wind {
+    height: 30px;
+    margin-right: 10px;
 }
