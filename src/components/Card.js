@@ -12,6 +12,11 @@ class Card extends React.Component{
             time:""
         }
     }
+    componentDidMount=()=>{
+        setInterval(() => {
+            this.getTime();
+        }, 1000);
+    }
     getTime=()=>{
         axios.get("http://worldtimeapi.org/api/timezone/Asia/Kolkata")
         .then((result)=>{
@@ -26,7 +31,6 @@ class Card extends React.Component{
                 <Header  place="Dubai" time={this.state.time}></Header>
                 <Middle  img="Cloudy"></Middle>
                 <Footer  wind="2" humi="23" temp="32"></Footer>
-                <button onClick={this.getTime}>Gettime</button>
             </div>
         )
     }
