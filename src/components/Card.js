@@ -20,6 +20,9 @@ class Card extends React.Component{
         setInterval(() => {
             this.getTime();
         }, 1000);
+        setInterval(() => {
+            this.getWeather();
+        }, 10000);
     }
     getTime=()=>{
         axios.get("http://worldtimeapi.org/api/timezone/Asia/Kolkata")
@@ -53,7 +56,6 @@ class Card extends React.Component{
                 <Header  place="Dubai" time={this.state.time}></Header>
                 <Middle  img={this.state.description}></Middle>
                 <Footer  wind={this.state.windflow} humi={this.state.humidity} temp={this.state.temprature}></Footer>
-                <button onClick={this.getWeather}>GetWeather</button>
             </div>
         )
     }
