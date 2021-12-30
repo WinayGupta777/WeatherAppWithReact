@@ -10,6 +10,7 @@ const Images={
     cloudWind: require('./icons/CloudWind.png'),
     Haze: require('./icons/Haze.png'),
     Mist: require('./icons/Haze.png'),
+    Smoke: require('./icons/Smoke.png'),
     wind_symbol: require('./icons/wind.png'),
     humidity_symbol: require('./icons/humidity.png'),
 }

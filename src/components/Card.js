@@ -52,12 +52,11 @@ class Card extends React.Component{
     }
     render(){
         return(
-            <><div className="cardlayout">
+        <div className="cardlayout">
                 <Header  place={this.props.place} time={this.state.time}></Header>
                 <Middle  img={this.state.description}></Middle>
                 <Footer  wind={this.state.windflow} humi={this.state.humidity} temp={this.state.temprature}></Footer>
             </div>
-            </>
         )
     }
 }

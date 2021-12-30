@@ -11,19 +11,20 @@ body{
 }
 
 div.container {
+    margin: 100px 0px;
     display: grid;
     grid-gap: 50px;
     grid-template-columns: auto auto;
     align-items: center;
     justify-content: center;
 }
-
 div.cardlayout{
     height: 500px;
     width: 500px;
     padding: 10px;
 
     border: 2px solid rgb(73, 72, 72);
+    box-shadow: 3px 3px 15px rgb(31, 30, 30);
     border-radius: 8px;
     background-image: linear-gradient(to right,rgb(24, 24, 24),rgb(66, 66, 66));
 
