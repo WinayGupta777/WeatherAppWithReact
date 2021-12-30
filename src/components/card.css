@@ -4,6 +4,18 @@
 body{
     background-color: rgb(49, 49, 49);
     font-family: 'Quicksand','sans-serif';
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.container {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
 }
 
 div.cardlayout{
