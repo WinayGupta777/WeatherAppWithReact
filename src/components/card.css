@@ -50,24 +50,26 @@ div.svg img {
 
 div.more {
     height: 100px;
-    padding-left: 20px;
+    padding-left: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .more .two {
     height: 100px;
-    width: 130px;
+    width: 180px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 
 }
 .more .temp {
-    width: 140px;
+    width: 130px;
+    margin-right: 35px;
     color: aliceblue;
     font-size: 75px;
     font-weight: 500;
+    text-align: right;
 
 }
 

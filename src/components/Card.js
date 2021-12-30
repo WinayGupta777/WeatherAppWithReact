@@ -9,7 +9,11 @@ class Card extends React.Component{
     constructor(props){
         super(props)
         this.state={
-            time:""
+            time:"",
+            temprature:"",
+            humidity:"",
+            description:"",
+            windflow:""
         }
     }
     componentDidMount=()=>{
@@ -25,12 +29,31 @@ class Card extends React.Component{
             this.setState({time:t.split('T')[1].substr(0,5)})
         })
     }
+    getWeather=()=>{
+        const city="borsad";
+        const key="6c23166de5ccdd6ac3e247f428e48e91";
+        axios.get("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key)
+        .then((result)=>{
+            let tmptr = result.data.main.temp;
+            const hmdt = result.data.main.humidity;
+            const desc = result.data.weather[0].main;
+            const wind = result.data.wind.speed;
+            tmptr = Math.round(tmptr-273.15);
+            this.setState({
+                temprature:tmptr,
+                humidity: hmdt,
+                description:desc,
+                windflow:wind
+            })
+        })
+    }
     render(){
         return(
             <div className="cardlayout">
                 <Header  place="Dubai" time={this.state.time}></Header>
-                <Middle  img="Cloudy"></Middle>
-                <Footer  wind="2" humi="23" temp="32"></Footer>
+                <Middle  img={this.state.description}></Middle>
+                <Footer  wind={this.state.windflow} humi={this.state.humidity} temp={this.state.temprature}></Footer>
+                <button onClick={this.getWeather}>GetWeather</button>
             </div>
         )
     }
