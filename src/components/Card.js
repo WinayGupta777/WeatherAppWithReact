@@ -33,7 +33,7 @@ class Card extends React.Component{
         })
     }
     getWeather=()=>{
-        const city="borsad";
+        const city="tokyo";
         const key="6c23166de5ccdd6ac3e247f428e48e91";
         axios.get("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key)
         .then((result)=>{

@@ -3,11 +3,12 @@ import Images from "./accessImages";
 class Middle extends React.Component{
     constructor(props){
         super(props)
+        console.log(props.img)
     }
     render(){
         return(
             <div className="svg">
-                <img src={Images.cloudy}></img>
+                <img src={Images[this.props.img]}></img>
                 <span className="condition">{this.props.img}</span>
             </div>
         )
