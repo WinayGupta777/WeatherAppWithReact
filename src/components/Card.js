@@ -33,7 +33,7 @@ class Card extends React.Component{
         })
     }
     getWeather=()=>{
-        const city="tokyo";
+        const city="borsad";
         const key="6c23166de5ccdd6ac3e247f428e48e91";
         axios.get("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key)
         .then((result)=>{
@@ -52,11 +52,12 @@ class Card extends React.Component{
     }
     render(){
         return(
-            <div className="cardlayout">
-                <Header  place="Dubai" time={this.state.time}></Header>
+            <><div className="cardlayout">
+                <Header  place="Borsad" time={this.state.time}></Header>
                 <Middle  img={this.state.description}></Middle>
                 <Footer  wind={this.state.windflow} humi={this.state.humidity} temp={this.state.temprature}></Footer>
             </div>
+            </>
         )
     }
 }
