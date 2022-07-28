@@ -5,7 +5,7 @@ const App=()=>{
   return(
     <div className="container">
       <Card place="Delhi"></Card>
-      <Card place="Goa"></Card>
+      <Card place="Surat"></Card>
       <Card place="Jaipur"></Card>
       <Card place="Anand"></Card>
     </div>
