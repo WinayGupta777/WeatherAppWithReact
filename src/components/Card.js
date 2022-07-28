@@ -34,7 +34,9 @@ class Card extends React.Component{
     }
     getWeather=()=>{
         const city=this.props.place;
-        const key="";
+        // const key="6c23166de5ccdd6ac3e247f428e48e91";
+        const key = process.env.REACT_APP_KEYNAME;
+        console.log(process.env.REACT_APP_KEYNAME);
         axios.get("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key)
         .then((result)=>{
             let tmptr = result.data.main.temp;
